@@ -7,6 +7,12 @@ import { HeroDetailComponent } from './hero-detail/hero-detail.component';
 import { MessagesComponent } from './messages/messages.component';
 import { AppRoutingModule } from './/app-routing.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { ClickMeComponent } from './event/click-me.component';
+import { LoopbackComponent } from './event/loop-back.component';
+import { EnterComponent } from './event/enter.component';
+import { BlurComponent } from './event/blur.component';
+import { CombineComponent } from './event/combine.component';
+import { HeroFormComponent } from './hero-form/hero-form.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +20,13 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     HeroesComponent,
     HeroDetailComponent,
     MessagesComponent,
-    DashboardComponent
+    DashboardComponent,
+    ClickMeComponent,
+    LoopbackComponent,
+    EnterComponent,
+    BlurComponent,
+    CombineComponent,
+    HeroFormComponent
   ],
   imports: [
     BrowserModule,FormsModule, AppRoutingModule
