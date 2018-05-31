@@ -5,13 +5,15 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { HeroDetailComponent } from './hero-detail/hero-detail.component';
 import { CombineComponent } from './event/combine.component';
 import { HeroFormComponent } from './hero-form/hero-form.component';
+import { AddHeroComponent } from './add-hero/add-hero.component';
 const routes:Routes=[
   {path:'heroes',component:HeroesComponent},
   {path:'dashboard',component:DashboardComponent},
   {path:'',redirectTo:'/dashboard',pathMatch:'full'},
   {path:'detail/:id',component:HeroDetailComponent},
   {path:'event',component:CombineComponent},
-  {path:'form',component:HeroFormComponent}
+  {path:'form',component:HeroFormComponent},
+  {path:'add',component:AddHeroComponent}
   ];
 @NgModule({
   imports:[RouterModule.forRoot(routes)],

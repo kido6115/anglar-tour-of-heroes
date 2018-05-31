@@ -13,6 +13,9 @@ import { EnterComponent } from './event/enter.component';
 import { BlurComponent } from './event/blur.component';
 import { CombineComponent } from './event/combine.component';
 import { HeroFormComponent } from './hero-form/hero-form.component';
+import { HttpClientModule } from '@angular/common/http';
+import { AddHeroComponent } from './add-hero/add-hero.component';
+import { UpdateHeroComponent } from './update-hero/update-hero.component';
 
 @NgModule({
   declarations: [
@@ -26,10 +29,12 @@ import { HeroFormComponent } from './hero-form/hero-form.component';
     EnterComponent,
     BlurComponent,
     CombineComponent,
-    HeroFormComponent
+    HeroFormComponent,
+    AddHeroComponent,
+    UpdateHeroComponent,
   ],
   imports: [
-    BrowserModule,FormsModule, AppRoutingModule
+    BrowserModule,FormsModule, AppRoutingModule,HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

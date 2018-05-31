@@ -1,11 +1,28 @@
 <div *ngIf="hero">
   <h2>{{hero.name|uppercase}} Details</h2>
   <div>
-    <span>id:</span>{{hero.id}}</div>
-  <div>
-    <label>name:
-      <input [(ngModel)]="hero.name" placeholder="name">
-    </label>
-  </div>
+    <form #heroForm="ngForm">
+      <div class="form-group">
+        <label for="email">編號:</label>
+        <input type="text" [(ngModel)]="hero.id" placeholder="編號" name="id" class="form-control" required id="id">
+      </div>
+  
+      <div class="form-group">
+        <label for="name">名稱:</label>
+        <input type="text" [(ngModel)]="hero.name" placeholder="名稱" name="name" class="form-control" required id="name">
+      </div>
+  
+      <div class="form-group">
+        <label for="alterEgo">外號:</label>
+        <input type=text [(ngModel)]="hero.alterEgo" placeholder="外號" name="alterEgo" class="form-control" required id="alterEgo">
+      </div>
+  
+      <div class="form-group">
+        <label for="power">超能力:</label>
+        <input type=text [(ngModel)]="hero.power" placeholder="超能力" name="power" class="form-control" required id="power">
+      </div>
+    </form>
   <button (click)="goBack()">go back</button>
+  <button (click)="delete()" >Delete</button>
+  <button class="btn btn-success"  [disabled]="!heroForm.form.valid" (click)="updateHero()">Update</button>
 </div>

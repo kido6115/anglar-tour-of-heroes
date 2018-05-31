@@ -1,0 +1,25 @@
+<div class="col-md-6">
+  <h2 class="text-center">Add Hero</h2>
+  <form #heroForm="ngForm">
+    <div class="form-group">
+      <label for="email">編號:</label>
+      <input type="number" [(ngModel)]="hero.id" placeholder="編號" name="id" class="form-control" required id="id">
+    </div>
+
+    <div class="form-group">
+      <label for="name">名稱:</label>
+      <input type="text" [(ngModel)]="hero.name" placeholder="名稱" name="name" class="form-control" required id="name">
+    </div>
+
+    <div class="form-group">
+      <label for="alterEgo">外號:</label>
+      <input type=text [(ngModel)]="hero.alterEgo" placeholder="外號" name="alterEgo" class="form-control" required id="alterEgo">
+    </div>
+
+    <div class="form-group">
+      <label for="power">超能力:</label>
+      <input type=text [(ngModel)]="hero.power" placeholder="超能力" name="power" class="form-control" required id="power">
+    </div>
+    <button class="btn btn-success"  [disabled]="!heroForm.form.valid" (click)="createHero()">Create</button>
+  </form>
+</div>
