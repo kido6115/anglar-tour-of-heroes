@@ -17,7 +17,7 @@ export class AddHeroComponent implements OnInit {
   createHero():void{
     this.heroService.createHero(this.hero).subscribe(data => {
       alert("Hero created successfully.");
-      this.location.back();
+      window.location.href='/';
     });
   }
   ngOnInit() {
