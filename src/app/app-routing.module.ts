@@ -13,7 +13,7 @@ const routes:Routes=[
   {path:'detail/:id',component:HeroDetailComponent},
   {path:'event',component:CombineComponent},
   {path:'form',component:HeroFormComponent},
-  {path:'add',component:AddHeroComponent}
+  {path:'add',component:AddHeroComponent},
   ];
 @NgModule({
   imports:[RouterModule.forRoot(routes)],
